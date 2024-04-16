@@ -1,0 +1,144 @@
+{% load static %}
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Top Games | Inicio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link rel="stylesheet" href="h!ttps://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static '/css/style.css' %}">
+</head>
+
+<body>
+	<header>
+        <h1 class="logo">Top Games</h1>
+			<nav class="navbar navbar-expand-lg navbar-light">
+				<a class="navbar-brand  text-white" href="{% url 'home' %}">Inicio</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				  <span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNav">
+				  <ul class="navbar-nav">
+
+					<li class="nav-item dropdown">
+						<a class="nav-link  text-white" href="#">Categorías</a>
+						<div class="dropdown-content">
+							<a href="{% url 'terror' %}">Terror</a>
+							<a href="{% url 'accion' %}">Acción</a>
+							<a href="{% url 'lucha' %}">Lucha</a>
+							<a href="{% url 'deporte' %}">Deporte</a>
+							<a href="{% url 'carreras' %}">Carreras</a>
+						</div>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link  text-white" href="{% url 'login_usuario' %}">Registro</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link  text-white" href="{% url 'contacto' %}">Contacto</a>
+					</li>
+				  </ul>
+				</div>
+			  </nav>
+    </header>
+<section class=" container">
+
+
+	<div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+		<div class="carousel-indicators">
+		  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+		  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+		  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+		  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></button>
+		  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="4" aria-label="Slide 5"></button>
+		</div>
+		<div class="carousel-inner">
+		  <div class="carousel-item active" data-bs-interval="10000">
+			<img src="{% static '/img/terror.png' %}" class="d-block w-100" alt="...">
+			<div class="carousel-caption d-none d-md-block text-white">
+			  <h5>¡Sumérgete en la oscuridad!</h5>
+			  <p> ¿Te atreves a explorar los rincones más oscuros? Descubre el terror en cada sombra y enfrenta tus miedos.</p>
+			  <a href="{% url 'terror' %}" class="btn btn-danger">Ver más</a>
+			</div>
+		  </div>
+		  <div class="carousel-item" data-bs-interval="2000">
+			<img src="{% static '/img/accion.png' %}" class="d-block w-100" alt="...">
+			<div class="carousel-caption d-none d-md-block text-white">
+			  <h5>¡Adrenalina pura en cada bala!</h5>
+			  <p>Prepárate para la acción sin límites. Enfréntate a desafíos intensos, combates épicos y aventuras llenas de emoción.</p>
+			  <a href="{% url 'accion' %}" class="btn btn-danger">Ver más</a>
+			</div>
+		  </div>
+		  <div class="carousel-item">
+			<img src="{% static '/img/lucha.png' %}" class="d-block w-100" alt="...">
+			<div class="carousel-caption d-none d-md-block text-white">
+			  <h5>¡Demuestra tu fuerza y habilidad!</h5>
+			  <p> El ring te espera para que des lo mejor de ti. Libra batallas épicas, domina técnicas impresionantes y alcanza la gloria.</p>
+			  <a href="{% url 'lucha' %}" class="btn btn-danger">Ver más</a>
+			</div>
+		  </div>
+		  <div class="carousel-item">
+			<img src="{% static '/img/deportes.png' %}" class="d-block w-100" alt="...">
+			<div class="carousel-caption d-none d-md-block text-white">
+			  <h5>¡Siente la pasión del deporte!</h5>
+			  <p> Vive la emoción de la competición en cada partido. Desde fútbol hasta baloncesto, encuentra tu deporte favorito y compite por la victoria.</p>
+			  <a href="{% url 'deporte' %}" class="btn btn-danger">Ver más</a>
+			</div>
+		  </div>
+		  <div class="carousel-item">
+			<img src="{% static '/img/carreras.png' %}" class="d-block w-100" alt="...">
+			<div class="carousel-caption d-none d-md-block text-white">
+			  <h5>¡Acelera hacia la gloria!</h5>
+			  <p>Pon a prueba tu habilidad al volante en emocionantes carreras. Desde circuitos urbanos hasta pistas off-road, desafía a tus rivales y alcanza la meta.</p>
+			  <a href="{% url 'carreras' %}" class="btn btn-danger">Ver más</a>
+			</div>
+		  </div>
+
+		</div>
+		<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+		  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+		  <span class="visually-hidden">Previous</span>
+		</button>
+		<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+		  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+		  <span class="visually-hidden">Next</span>
+		</button>
+	  </div>
+	   
+	   
+			
+        
+	
+        
+	
+	
+        
+	
+	
+       
+	
+	
+       
+		
+   </section>
+	
+	
+<footer>
+		
+		<div class="container">
+		<p>Top games  2023</p>
+		
+	</div>
+		
+	
+	
+	
+	
+	</footer>
+
+    <!-- jQuery -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</body>
+</html>
